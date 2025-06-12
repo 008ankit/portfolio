@@ -7,31 +7,24 @@
     <title>Ankit-Developer Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="Linkdin" href="www.linkedin.com/in/ankit-kumar-maharana-6a858b288">
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             background-color: rgb(0, 0, 39);
             color: white;
             font-family: 'Poppins', sans-serif;
+            width: 100%;
+            overflow-x: hidden;
         }
-         @media (max-width: 768px) {
-        body {
-            font-size: 14px;
-            width: 100%; /* Make the body full width on smaller screens */
-        }
-        /* Add other styles for mobile */
-    }
 
         nav {
             display: flex;
@@ -39,32 +32,34 @@
             align-items: center;
             height: 70px;
             background-color: rgb(18, 18, 62);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav ul {
             display: flex;
-            justify-self: center;
+            justify-content: center;
         }
 
         nav ul li {
             list-style: none;
-            margin: 0 30px;
-            font-family: "Gill Sans Extrabold", sans-serif;
-
+            margin: 0 15px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: antiquewhite;
+            font-size: 0.9rem;
         }
 
         nav ul li a:hover {
             color: rgb(17, 208, 205);
-            font-size: 1.04rem;
+            font-size: 0.95rem;
         }
 
         .left {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
         }
 
@@ -72,157 +67,331 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            margin: 120px 0;
+            margin: 80px 0;
+            flex-wrap: wrap;
+            padding: 0 20px;
         }
 
         .firstSection>div {
-            width: 30%;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px 0;
         }
 
-
         .leftSection {
-            font-size: 3rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .rightSection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .rightSection img {
-            width: 80%;
-            margin: 40px 0;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px 0;
             border-radius: 7px;
             cursor: pointer;
         }
 
         .rightSection h1 {
-            justify-content: center;
+            text-align: center;
+            font-size: 1.5rem;
         }
 
         .hh {
             font-family: 'Poppins', sans-serif;
-            margin: 0px 90px;
+            margin: 0px 20px;
         }
 
         .purple {
-            font-size: 4rem;
+            font-size: 2.5rem;
             color: rgb(170, 107, 228);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
         }
 
         #element {
             color: rgb(141, 224, 197);
+            font-size: 1.5rem;
+            display: block;
+            min-height: 80px;
         }
 
         main hr {
             border: 0;
             background-color: rgb(240, 239, 241);
             height: 1.2px;
-            margin: 40px 84px;
+            margin: 40px 20px;
             box-shadow: 0px 0px 12px rgb(240, 239, 241);
         }
 
+        .bbb {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
         .bb {
-            font-size: 1.09rem;
-            justify-self: center;
+            font-size: 1rem;
             border: 2px solid white;
             border-radius: 7px;
             list-style: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: rgb(139, 102, 212);
             cursor: pointer;
             text-decoration: none;
-
-        }
-
-        .bb a {
-            text-decoration: none;
             color: black;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
-        .bb a:hover {
-            font-size: 1.001rem;
+        .bb:hover {
+            transform: scale(1.05);
         }
 
+        /* Improved Work Experience Section */
         .secondsection {
             margin: auto;
-            max-width: 80vw;
-            height: 80vh;
+            max-width: 90vw;
+            min-height: 80vh;
+            padding: 20px;
         }
 
         .secondsection h2 {
-            margin: auto;
-            font-size: 2.08rem;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
         .txtgrey {
             color: gray;
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .secondsection .box {
-            background-color: rgb(248, 249, 251);
-            width: 80vw;
-            height: 2px;
-            margin: 56px 0;
-            display: flex;
-
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .secondsection .vertical {
-            height: 93px;
-            width: 1px;
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
             background-color: white;
-            margin: 0 130px;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
         }
 
-        .images-top {
-            width: 53px;
+        .timeline-item {
+            padding: 10px 40px;
             position: relative;
-            top: -57px;
-            left: -20px;
-
+            width: 50%;
+            box-sizing: border-box;
         }
 
-        .vertical-title {
-
-            position: relative;
-            top: 50px;
-            width: 190px;
-            font-size: 15px;
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(170, 107, 228);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
         }
 
-        .vertical-desc {
-            position: relative;
-            top: 70px;
-            width: 166px;
-            font-size: 10px;
-            color: gray;
+        .left-item {
+            left: 0;
         }
 
-        .H2 {
-            color: rgb(0, 0, 39);
+        .right-item {
+            left: 50%;
+        }
+
+        .left-item::after {
+            right: -10px;
+        }
+
+        .right-item::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background-color: rgb(18, 18, 62);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content h3 {
+            color: rgb(170, 107, 228);
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            color: #ddd;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .timeline-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
         footer {
             background-color: rgb(4, 4, 19);
-
         }
 
         .footer {
             display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: space-around;
         }
 
         .footer ul {
             list-style-type: none;
+            padding: 10px;
+        }
+
+        .footer li {
+            margin: 8px 0;
+            font-size: 0.9rem;
         }
 
         .footer>div {
-            width: 223px;
+            width: 200px;
+            margin: 10px;
         }
 
         .footer-rights {
             text-align: center;
             color: grey;
             padding: 12px 0;
+            font-size: 0.8rem;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            .left {
+                margin-bottom: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 5px 10px;
+            }
+
+            .firstSection {
+                margin: 40px 0;
+            }
+
+            .leftSection {
+                font-size: 1.5rem;
+            }
+
+            .purple {
+                font-size: 2rem;
+            }
+
+            #element {
+                font-size: 1.2rem;
+                min-height: 60px;
+            }
+
+            /* Timeline adjustments for mobile */
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 21px;
+            }
+
+            .left-item,
+            .right-item {
+                left: 0;
+            }
+
+            .right-item::after,
+            .left-item::after {
+                left: 21px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .left {
+                font-size: 1.2rem;
+            }
+
+            nav ul li a {
+                font-size: 0.8rem;
+            }
+
+            .leftSection {
+                font-size: 1.2rem;
+            }
+
+            .purple {
+                font-size: 1.5rem;
+            }
+
+            #element {
+                font-size: 1rem;
+            }
+
+            .bb {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
+
+            .footer>div {
+                width: 100%;
+                text-align: center;
+            }
+
+            .timeline-content {
+                padding: 15px;
+            }
+
+            .timeline-content h3 {
+                font-size: 1rem;
+            }
+
+            .timeline-content p {
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -230,7 +399,6 @@
 <body>
     <header>
         <nav>
-
             <div class="left">Ankit's Portfolio</div>
             <div class="right">
                 <ul>
@@ -256,85 +424,77 @@
                     <button class="bb">
                         <a href="/">Visit GitHUb </a>
                     </button>
+                    <button class="bb">
+                        <a href="https://www.linkedin.com/in/ankit-kumar-maharana-6a858b288/">Linkdin Profile</a>
+                    </button>
                 </div>
-                <button class="bb"> <a href="https://www.linkedin.com/in/ankit-kumar-maharana-6a858b288/">Linkdin
-                        Profile</a></button>
             </div>
             <div class="rightSection">
-                <img src="Untitled .png" alt="">
+                <img src="Untitled .png" alt="Ankit's Profile Picture">
                 <h1 class="ha">Ankit Kumar Maharana</h1>
             </div>
         </section>
         <hr>
         <section class="secondsection">
-            <span class="txtgery">What I have done so far</span>
-            <h2>Work Exprience</h2>
-            <h2 class="H2">.</h2>
-            <div class="box">
-                <div class="vertical">
-                    <img class="images-top" src="images (1).jpg" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2021-2025)
-                    </div>
-                    <div class="vertical-desc">
-                        Developed HTML pages for a temporary-rental website focused on affordable short-term rentals.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="images-top" src="images.jpg" alt="">
-                    <div class="vertical-title">
-                        Web Developer (2023-present)
-                    </div>
-                    <div class="vertical-desc">
-                        Developed a Temporary-rental
-                        Website for middle-class families in modern city. It mainly focuses on housewife and bachlores
-                        and childrens for temporary-renting of accsessories and other things for a short period of time.
+            <span class="txtgrey">What I have done so far</span>
+            <h2>Work Experience</h2>
+
+            <div class="timeline">
+                <div class="timeline-item left-item">
+                    <div class="timeline-content">
+                        <img src="images (1).jpg" alt="HTML Developer" class="timeline-img">
+                        <h3>HTML Developer (2021-2025)</h3>
+                        <p>Developed HTML pages for a temporary-rental website focused on affordable short-term rentals
+                            with responsive design and accessibility features.</p>
                     </div>
                 </div>
-                <div class="vertical">
-                    <img class="images-top" src="images (1).jpg" alt="">
-                    <div class="vertical-title">
-                        Coder or Programmer
-                    </div>
-                    <div class="vertical-desc">
-                        Implementing core functionalities using Java and C to enable seamless job matching.
+                <div class="timeline-item right-item">
+                    <div class="timeline-content">
+                        <img src="images.jpg" alt="Web Developer" class="timeline-img">
+                        <h3>Web Developer (2023-present)</h3>
+                        <p>Developed a Temporary-rental Website for middle-class families in modern city with React.js
+                            and Node.js backend.</p>
                     </div>
                 </div>
-                <div class="vertical">
-                    <img class="images-top" src="images (1).jpg" alt="">
-                    <div class="vertical-title">
-                        UI/UX Designer
+                <div class="timeline-item left-item">
+                    <div class="timeline-content">
+                        <img src="images (1).jpg" alt="Programmer" class="timeline-img">
+                        <h3>Coder or Programmer</h3>
+                        <p>Implementing core functionalities using Java and C to enable seamless job matching and
+                            algorithm optimization.</p>
                     </div>
-                    <div class="vertical-desc">
-                        Figma Design : Creating interactive prototypes and wireframes to enhance user experience and
-                        streamline navigation.
+                </div>
+                <div class="timeline-item right-item">
+                    <div class="timeline-content">
+                        <img src="images (1).jpg" alt="UI/UX Designer" class="timeline-img">
+                        <h3>UI/UX Designer</h3>
+                        <p>Figma Design: Creating interactive prototypes and wireframes to enhance user experience and
+                            streamline navigation flows.</p>
                     </div>
                 </div>
             </div>
         </section>
-        </hr>
     </main>
     <footer>
         <div class="footer">
             <div class="footer-first">
-                <h3>Ankti's Portfolio</h3>
+                <h3>Ankit's Portfolio</h3>
             </div>
             <div class="footer-second">
                 <ul>
                     <li>Home</li>
                     <li>About</li>
                     <li>Service</li>
-                    <li>content</li>
+                    <li>Contact</li>
                 </ul>
             </div>
-            <div class="fouter-third">
+            <div class="footer-third">
                 <ul>
                     <li>Email</li>
                     <li>Faq</li>
                     <li>Help</li>
                 </ul>
             </div>
-            <div class="fouter-fourth"> </div>
         </div>
         <div class="footer-rights">
             Copyright &#169; ankitsportfolio.com | All Rights Reserved
@@ -343,7 +503,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Graphic editor', ' UX/UI Editor', 'And I am curious about Innovative Ideas.'],
+            strings: ['Web Developer', 'Graphic editor', 'UX/UI Editor', 'And I am curious about Innovative Ideas.'],
             typeSpeed: 50,
         });
     </script>
